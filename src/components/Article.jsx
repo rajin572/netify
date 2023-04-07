@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "../assets/img/Rectangle1.png";
 import { HiOutlineBookmark } from "react-icons/hi";
 
 function Article({ data ,updateBookMark, timer, setTimer}) {

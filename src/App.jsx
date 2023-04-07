@@ -20,7 +20,7 @@ function App() {
   const updateBookMark = (newsData) => {
     const a = bookMark.filter((data) => {
       if(data.id === newsData.id){
-        toast.error('find');
+        toast.error('You have allready added this in bookmark');
       }
       else{
         return data
@@ -36,8 +36,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="grid w-10/12 mx-auto md:grid-cols-4 gap-2 items-start">
-        <div className="md:col-span-3 col-span-1 justify-self-start my-5">
+      <div className="grid w-10/12 mx-auto md:grid-cols-6 gap-2 items-start">
+        <div className="md:col-span-4 col-span-1 justify-self-start">
           {data.map((data) => (
             <Article
               data={data}

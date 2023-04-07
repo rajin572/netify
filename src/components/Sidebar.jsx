@@ -14,13 +14,13 @@ function Sidebar({ bookMark, timer }) {
         </h1>
         <div>
           {bookMark.length === 0 ? (
-            <p className="mb-2 text-red-600">You haven't added</p>
+            <p className="mb-2 text-[#6047EC]">You haven't added</p>
           ) : (
             <div>
               {bookMark.map((data) => (
                 <div
                   key={data.id}
-                  className="w-full p-4 mb-2 bg-white border-white rounded border"
+                  className="w-full p-4 mb-2 text-[#6047EC] bg-white border-white rounded border"
                 >
                   {data.title}
                 </div>

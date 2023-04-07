@@ -16,24 +16,21 @@ function App() {
       .then((data) => setData(data));
   }, []);
 
-  
   const updateBookMark = (newsData) => {
     const a = bookMark.filter((data) => {
-      if(data.id === newsData.id){
-        toast.error('You have allready added this in bookmark');
-      }
-      else{
-        return data
+      if (data.id === newsData.id) {
+        toast.error("You have allready added this in bookmark");
+      } else {
+        return data;
       }
     });
 
-    const newBookMark = [...a, newsData]
-    
-    SetBookMark(newBookMark)
+    const newBookMark = [...a, newsData];
 
- };
- console.log(bookMark)
- 
+    SetBookMark(newBookMark);
+  };
+  console.log(bookMark);
+
   return (
     <div className="App">
       <Navbar />
@@ -52,7 +49,7 @@ function App() {
         </div>
         <Sidebar bookMark={bookMark} timer={timer} />
       </div>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }

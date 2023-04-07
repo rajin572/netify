@@ -1,7 +1,7 @@
 import React from "react";
 import { HiOutlineBookmark } from "react-icons/hi";
 
-function Article({ data ,updateBookMark, timer, setTimer}) {
+function Article({ data, updateBookMark, timer, setTimer }) {
   const { author, title, cover_image, author_image, read_time, publish_Date } =
     data;
   return (
@@ -28,18 +28,21 @@ function Article({ data ,updateBookMark, timer, setTimer}) {
             <div className="readtime">
               <span className="mr-1">{read_time}</span>
               <span className="mr-1">Min Read</span>
-              <span onClick={() => updateBookMark(data)} className=" cursor-pointer">
-                <HiOutlineBookmark
-                  className="inline"
-                  
-                />
+              <span
+                onClick={() => updateBookMark(data)}
+                className=" cursor-pointer"
+              >
+                <HiOutlineBookmark className="inline" />
               </span>
             </div>
           </div>
 
           {/* title */}
           <h1 className="text-4xl font-bold my-2 sm:text-xl">{title}</h1>
-          <button className="underline underline-offset-2 text-sky-600" onClick={() => setTimer(timer + read_time)}>
+          <button
+            className="underline underline-offset-2 text-sky-600"
+            onClick={() => setTimer(timer + read_time)}
+          >
             Mark as read
           </button>
         </div>
